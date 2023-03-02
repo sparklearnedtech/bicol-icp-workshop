@@ -7,7 +7,7 @@
 ## Tools
 * [Node](https://nodejs.org/en/) (LTS / Long Term Support version)
 * [Git](https://git-scm.com/download) (also have a [GitHub](https://github.com/) account)
-* [DFX](https://github.com/dfinity/sdk) (further installation process under _Setup_ section)
+* [DFX](https://github.com/dfinity/sdk) (further installation process under [Setup](#setup))
 * Text editor (any of your preference, e.g. [VSCode](https://code.visualstudio.com/download), [Sublime Text 3](https://www.sublimetext.com/3), etc.)
 
 ## Setup
