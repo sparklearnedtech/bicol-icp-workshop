@@ -6,8 +6,9 @@
 
 ## Tools
 * [Node](https://nodejs.org/en/) (LTS / Long Term Support version)
-* [Git](https://git-scm.com/download/mac) (also have a [GitHub](https://github.com/) account)
-* Text editor
+* [Git](https://git-scm.com/download) (also have a [GitHub](https://github.com/) account)
+* [DFX](https://github.com/dfinity/sdk) (further installation process under _Setup_ section)
+* Text editor (any of your preference, e.g. [VSCode](https://code.visualstudio.com/download), [Sublime Text 3](https://www.sublimetext.com/3), etc.)
 
 ## Setup
 
@@ -16,12 +17,20 @@
 #### Steps
 
 **DFX Installation**
-1. Open your Terminal app.
-2. Install DFX on your MacOS. Copy-paste and run this command:
+1. Install LTS version of [Node](https://nodejs.org/en/), and the latest version of [Git](https://git-scm.com/download/mac) in your environment.
+2. Open your Terminal app.
+3. Quick version check of Node and Git to see if it's running on your environment. Copy-paste and enter the following commands, one-by-one:
+	```
+	node --version
+	```
+	```
+	git --version
+	```
+4. Install DFX on your MacOS. Copy-paste and run this command:
 	```
 	DFX_VERSION=0.12.1 sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
 	```
-3. Upon successful installation of DFX, quick version check by copying the following command, paste it on your terminal, and press enter.
+5. Upon successful installation of DFX, quick version check by copying the command below, paste it on your terminal, and press enter.
 	```
 	dfx --version
 	```
