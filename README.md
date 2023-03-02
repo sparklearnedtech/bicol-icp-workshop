@@ -89,7 +89,7 @@
 	node --version
 	```
 
-**DFX**.
+**DFX Installation**
 1. Open your Linux environment.
 2. Install DFX on your Linux environment. Copy-paste and run this command:
 	```
