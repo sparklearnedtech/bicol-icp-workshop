@@ -104,6 +104,10 @@
 	```
 	DFX_VERSION=0.12.1 sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
 	```
+3. Upon successful installation of DFX, quick version check by copying the command below, paste it on your terminal, and press enter.
+	```
+	dfx --version
+	```
 
 ## Workshop Proper
 
