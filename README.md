@@ -95,3 +95,7 @@
 	```
 	DFX_VERSION=0.12.1 sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
 	```
+
+## Workshop Proper
+
+Lorem Ipsum
