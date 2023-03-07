@@ -63,7 +63,7 @@
 	```
 6. After installation, a new window will appear for initially setting up your Linux environment by setting your username and password.
 
-**Node Installation**. Even if you have existing Node on your Windows, you still need to manually install it on yout Linux environment.
+**Node Installation**. Even if you have existing Node on your Windows, you still need to manually install it on your Linux environment.
 
 1. Open your Linux environment. Search and open it up from the Start menu (e.g. Ubuntu).
 2. Install Homebrew. Copy-paste and run this command:
@@ -79,7 +79,7 @@
 	```
 4. Install Homebrew's dependenvies via sudo. Copy-paste and run this command:
 	```
-	sudo apt get install build-essential
+	sudo apt-get install build-essential
 	```
 5. Quick version check to see if your Homebrew works. Copy-paste and run this command:
 	```
