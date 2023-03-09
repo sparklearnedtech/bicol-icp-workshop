@@ -28,7 +28,7 @@
 	```
 4. Install DFX on your MacOS. Copy-paste and run this command:
 	```
-	DFX_VERSION=0.12.1 sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
+	sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
 	```
 5. Upon successful installation of DFX, quick version check by copying the command below, paste it on your terminal, and press enter.
 	```
@@ -63,7 +63,7 @@
 	```
 6. After installation, a new window will appear for initially setting up your Linux environment by setting your username and password.
 
-**Node Installation**. Even if you have existing Node on your Windows, you still need to manually install it on your Linux environment.
+**Node Installation**. Even if you have existing Node on your Windows, you still need to manually install it on yout Linux environment.
 
 1. Open your Linux environment. Search and open it up from the Start menu (e.g. Ubuntu).
 2. Install Homebrew. Copy-paste and run this command:
@@ -79,7 +79,7 @@
 	```
 4. Install Homebrew's dependenvies via sudo. Copy-paste and run this command:
 	```
-	sudo apt-get install build-essential
+	sudo apt get install build-essential
 	```
 5. Quick version check to see if your Homebrew works. Copy-paste and run this command:
 	```
@@ -102,7 +102,7 @@
 1. Open your Linux environment.
 2. Install DFX on your Linux environment. Copy-paste and run this command:
 	```
-	DFX_VERSION=0.12.1 sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
+	sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
 	```
 3. Upon successful installation of DFX, quick version check by copying the command below, paste it on your terminal, and press enter.
 	```
