@@ -30,6 +30,10 @@
 	```
 	sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
 	```
+	Alternative CDN
+	```
+	sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)" 
+	```
 5. Upon successful installation of DFX, quick version check by copying the command below, paste it on your terminal, and press enter.
 	```
 	dfx --version
@@ -103,6 +107,10 @@
 2. Install DFX on your Linux environment. Copy-paste and run this command:
 	```
 	sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
+	```
+	Alternative CDN
+	```
+	sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)" 
 	```
 3. Upon successful installation of DFX, quick version check by copying the command below, paste it on your terminal, and press enter.
 	```
