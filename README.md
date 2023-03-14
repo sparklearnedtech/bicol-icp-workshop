@@ -1,36 +1,27 @@
-# Bicol ICP Workshop
-
-## Prerequisites
-* Fundamental programming knowledge
-* Knows basic Git syntaxes
+# Building on ICP Blockchain: A Hands-on Workshop for Bicolano Developers
 
 ## Tools
 * [Node](https://nodejs.org/en/) (LTS / Long Term Support version)
-* [Git](https://git-scm.com/download) (also have a [GitHub](https://github.com/) account)
-* [DFX](https://github.com/dfinity/sdk) (further installation process under [Setup](#setup))
-* Text editor (any of your preference, e.g. [VSCode](https://code.visualstudio.com/download), [Sublime Text 3](https://www.sublimetext.com/3), etc.)
+* [DFX](https://github.com/dfinity/sdk) (detailed docs [here](https://internetcomputer.org/docs/current/references/cli-reference/))
+* Text editor (any of your preference, e.g. [VSCode](https://code.visualstudio.com/download), [Sublime Text 3](https://www.sublimetext.com/3))
 
 ## Setup
 
-### MacOS
-
-#### Steps
+### MacOS and Linux
 
 **DFX Installation**
-1. Install LTS version of [Node](https://nodejs.org/en/), and the latest version of [Git](https://git-scm.com/download/mac) in your environment.
-2. Open your Terminal app.
-3. Quick version check of Node and Git to see if it's running on your environment. Copy-paste and enter the following commands, one-by-one:
+
+1. Install LTS version of [Node](https://nodejs.org/en/).
+2. Open your terminal.
+3. Quick version check of Node to see if it's running on your environment. Copy-paste and enter the following commands, one-by-one:
 	```
 	node --version
 	```
-	```
-	git --version
-	```
-4. Install DFX on your MacOS. Copy-paste and run this command:
+4. Install DFX on your MacOS. Copy-paste and run either this command
 	```
 	sh -ci "$(curl -fsSL https://sfk.dfinity.org/install.sh)"
 	```
-	Alternative CDN
+	or this alternative CDN
 	```
 	sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)" 
 	```
@@ -45,9 +36,8 @@
 * Windows 10 or higher (version 2004 above). Build 19041.xxxx or higher.
 * 64-bit machine (System type x64 based PC)
 
-#### Steps
-
 **WSL Installation**. Technically DFX only supports Linux and Mac OS. But you can still run it on Windows through WSL (Windows Substack for Linux). And the recommended version for supporting DFX is WSL 2. If you already have WSL 2, skip this part. If you have WSL 1, upgrade it to 2 by starting at step #2.
+
 1. Open _Windows PowerShell_ as Administrator (Start menu > Windows PowerShell > right-click > Run as Administrator), copy-paste, and enter this command:
 	```
 	dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -103,6 +93,7 @@
 	```
 
 **DFX Installation**
+
 1. Open your Linux environment.
 2. Install DFX on your Linux environment. Copy-paste and run this command:
 	```
@@ -116,3 +107,72 @@
 	```
 	dfx --version
 	```
+
+## Workshop
+1. Create identity
+	```
+	dfx identity new <name>
+	```
+2. Use created identity
+	```
+	dfx identity use <name>
+	```
+3. Identity check
+	```
+	dfx identity whoami
+	```
+4. View list of identity
+	```
+	dfx identity list
+	```
+5. Get ledger account-id. Participant will copy their account-id and share to Harvz.
+	```
+	dfx ledger <account-id>
+	```
+6. Harvz will send 0.03 ICP to each participant's account-id (_Skip this step. This is just to demo how to send ICP in DFX_).
+	```
+	dfx ledger transfer <account-id> --memo 12345 --amount 0.03 --network ic
+	```
+7. Get identity principal.
+	```
+	dfx identity get-principal
+	```
+8. Create canister, and set amount to 0.029 ICP. Participant will take note and copy the canister-id and share to Harvz.
+	```
+	dfx ledger --network ic create-canister <principal> --amount 0.029
+	```
+9. Harvz will send 1.1 trillion cycles to each participant's wallet canister-id (_Skip this step. This is just to demo how to send cycles in DFX_).
+	```
+	dfx wallet send <canister-id> 1100000000000 --network ic
+	```
+10. Deploy wallet to created canister
+	```
+	dfx identity --network ic deploy-wallet <canister-id>
+    ```
+11. Create a new DFX project
+	```
+	dfx new my_dapp
+	```
+12. Open newly created DFX project
+	```
+	cd my_dapp
+	```
+13. Deployment
+    * Locally\
+    	Initially start a local canister execution environment and web server processes
+    	```
+		dfx start --background
+		```
+		Deploy locally
+		```
+		dfx deploy
+		```
+		Then run your deployed canister DApp
+		```
+		npm start
+		```
+	* To IC Network\
+		Deploy to IC main network with minimum amount of cycles at 300 billion
+		```
+		dfx deploy --network ic create <canister-name> --with-cycles 300000000000
+		```
