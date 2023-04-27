@@ -143,7 +143,7 @@
 	```
 9. Harvz will send 1.1 trillion cycles to each participant's wallet canister-id (_Skip this step. This is just to demo how to send cycles in DFX_).
 	```
-	dfx wallet send <canister-id> 1100000000000 --network ic
+	dfx wallet send <canister-id> 1000000000000 --network ic
 	```
 10. Deploy wallet to created canister
 	```
